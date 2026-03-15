@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: restaurant-app-service
+spec:
+  selector:
+    app: restaurant-app # Yeh Deployment ke matchLabels se match hona chahiye
+  ports:
+    - protocol: TCP
+      port: 83         # Bahar ka port (Jo aap browser mein likhte hain)
+      targetPort: 80   # Container ke andar ka port (Nginx)
+      nodePort: 30083  # Local system ke liye fixed port (Optional)
+  type: LoadBalancer   # Docker Desktop/Cloud ke liye

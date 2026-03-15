@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: restaurant-app-deployment
+  labels:
+    app: restaurant-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: restaurant-app
+  template:
+    metadata:
+      labels:
+        app: restaurant-app
+    spec:
+      containers:
+      - name: restaurant-container
+        image: nikhilshinde143/restaurant-app:latest
+        ports:
+        - containerPort: 80 # Dockerfile (Nginx) ka port
+        imagePullPolicy: Always # Taaki har baar naya image pull ho

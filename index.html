@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gold Fork | Fine Dining</title>
+    <style>
+        /* General Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #1a1a1a; color: #fff; line-height: 1.6; }
+        
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 1rem 5%; background: #111; position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid #333; }
+        .logo { font-size: 1.5rem; font-weight: bold; color: #d4af37; text-transform: uppercase; }
+        .nav-links { list-style: none; display: flex; }
+        .nav-links li { margin-left: 20px; }
+        .nav-links a { color: #fff; text-decoration: none; transition: 0.3s; }
+        .nav-links a:hover { color: #d4af37; }
+
+        /* Hero Section */
+        .hero { height: 80vh; background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=1500&q=80'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .hero h1 { font-size: 4rem; color: #d4af37; margin-bottom: 10px; }
+        .btn { padding: 12px 30px; background: #d4af37; color: #111; text-decoration: none; font-weight: bold; border-radius: 5px; margin-top: 20px; }
+
+        /* Menu Section */
+        .section { padding: 80px 10%; text-align: center; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .menu-item { background: #222; padding: 20px; border-radius: 10px; border: 1px solid #333; transition: transform 0.3s; }
+        .menu-item:hover { transform: translateY(-5px); border-color: #d4af37; }
+        .price { color: #d4af37; font-weight: bold; display: block; margin-top: 10px; }
+
+        /* Footer/Contact */
+        footer { background: #111; padding: 40px 10%; text-align: center; border-top: 1px solid #333; }
+        .footer-info { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">The Gold Fork</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Exquisite Flavors</h1>
+        <p>Experience the art of fine dining in the heart of the city.</p>
+        <a href="#menu" class="btn">View Our Menu</a>
+    </section>
+
+    <section class="section" id="menu">
+        <h2>Our Signature Dishes</h2>
+        <div class="menu-grid">
+            <div class="menu-item">
+                <h3>Truffle Risotto</h3>
+                <p>Arborio rice infused with black truffle oil and topped with shaved parmesan.</p>
+                <span class="price">$24.00</span>
+            </div>
+            <div class="menu-item">
+                <h3>Seared Wagyu Beef</h3>
+                <p>Premium cut wagyu served with roasted root vegetables and red wine reduction.</p>
+                <span class="price">$42.00</span>
+            </div>
+            <div class="menu-item">
+                <h3>Atlantic Salmon</h3>
+                <p>Pan-seared salmon with a lemon-butter glaze and wild asparagus.</p>
+                <span class="price">$28.00</span>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-info">
+            <h2>Visit Us</h2>
+            <p>123 Culinary Ave, Foodie Town</p>
+            <p>Phone: (555) 123-4567</p>
+            <p>Mon-Sun: 5:00 PM - 11:00 PM</p>
+        </div>
+        <p>&copy; 2026 The Golden Fork Restaurant. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
